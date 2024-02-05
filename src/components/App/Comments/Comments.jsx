@@ -11,7 +11,7 @@ const Comments = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: ADD_COMMENTS, payload: comment });
-    history.push("/5");
+    history.push("/review");
   };
   return (
     <>
@@ -24,8 +24,11 @@ const Comments = () => {
           onChange={(e) => setComment(e.target.value)}
           id="comment"
           required
+          data-testid="input"
         />
-        <button type="submit">Next</button>
+        <button type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </>
   );

@@ -6,6 +6,7 @@ import Support from "./Support/Support";
 import Comments from "./Comments/Comments";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Final from "./Final";
+import Thankyou from "./Thankyou";
 
 import "./App.css";
 import StartFeedback from "./StartFeedback";
@@ -25,11 +26,12 @@ function App() {
 
         {/* Define routes for each component */}
         <Route path="/" component={StartFeedback} exact />
-        <Route path="/1" component={Feeling} />
-        <Route path="/2" component={Understanding} />
-        <Route path="/3" component={Support} />
-        <Route path="/4" component={Comments} />
-        <Route path="/5" component={Final} />
+        <Route path="/feeling" component={Feeling} />
+        <Route path="/understanding" component={Understanding} />
+        <Route path="/support" component={Support} />
+        <Route path="/comments" component={Comments} />
+        <Route path="/final" component={Final} />
+        <Route path="/thank" component={Thankyou} />
       </div>
     </Router>
   );

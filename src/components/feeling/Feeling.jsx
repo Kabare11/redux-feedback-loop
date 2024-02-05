@@ -15,7 +15,7 @@ const Feeling = () => {
         onSubmit={(e) => {
           e.preventDefault();
           dispatch({ type: ADD_FEELING, payload: feeling });
-          history.push("/2");
+          history.push("/understanding");
         }}
       >
         <input
@@ -25,8 +25,11 @@ const Feeling = () => {
           onChange={(e) => setFeeling(e.target.value)}
           id="feeling"
           required
+          data-testid="input"
         />
-        <button type="submit">Next</button>
+        <button type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </>
   );

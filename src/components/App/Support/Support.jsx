@@ -11,7 +11,7 @@ const Support = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: ADD_SUPPORTED, payload: supported });
-    history.push("/4");
+    history.push("/comments");
   };
 
   return (
@@ -25,8 +25,11 @@ const Support = () => {
           onChange={(e) => setSupported(e.target.value)}
           id="supported"
           required
+          data-testid="input"
         />
-        <button type="submit">Next</button>
+        <button type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </>
   );

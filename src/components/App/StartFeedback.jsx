@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const StartFeedback = () => {
   return (
-    <Link to="/1">
-      <button>Start feedback</button>
+    <Link to="/feeling">
+      <button data-testid="next">Start feedback</button>
     </Link>
   );
 };

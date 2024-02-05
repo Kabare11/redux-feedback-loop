@@ -12,7 +12,7 @@ const Understanding = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: ADD_UNDERSTANDING, payload: understandingPost });
-    history.push("/3");
+    history.push("/support");
   };
   return (
     <>
@@ -24,8 +24,11 @@ const Understanding = () => {
           value={understandingPost}
           onChange={(e) => setUnderstandingPost(e.target.value)}
           required
+          data-testid="input"
         />
-        <button type="submit">Next</button>
+        <button type="submit" data-testid="next">
+          Next
+        </button>
       </form>
     </>
   );
