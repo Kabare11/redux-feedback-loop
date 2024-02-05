@@ -30,7 +30,7 @@ function App() {
         <Route path="/understanding" component={Understanding} />
         <Route path="/support" component={Support} />
         <Route path="/comments" component={Comments} />
-        <Route path="/final" component={Final} />
+        <Route path="/review" component={Final} />
         <Route path="/thank" component={Thankyou} />
       </div>
     </Router>

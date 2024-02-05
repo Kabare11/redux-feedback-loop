@@ -10,7 +10,7 @@ const Feeling = () => {
 
   return (
     <>
-      <h1>How are you feeling today?</h1>
+      <p>How are you feeling today?</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -19,12 +19,13 @@ const Feeling = () => {
         }}
       >
         <input
-          type="number"
+          type="text"
           name="feeling"
           value={feeling}
           onChange={(e) => setFeeling(e.target.value)}
           id="feeling"
-          required
+          // required
+          placeholder="feeling"
           data-testid="input"
         />
         <button type="submit" data-testid="next">
